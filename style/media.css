@@ -176,7 +176,7 @@
        margin: 0 auto;
     }
     .d_arrow{
-        bottom: -5%;
+        bottom: -7%;
         left: 19%;
     }
 }
@@ -823,10 +823,15 @@ margin-top: 25%;
     }  
     .rout_h_6{
         font-size: 26px;
+       line-height: unset;
+       min-height: unset;
     }
     .rout_h_7{
         font-size: 26px;
     }
+    .rout_h_1{
+        font-size: 32px;
+    } 
 }
 @media(max-width: 413px) {
     .kamch_h{
@@ -834,6 +839,9 @@ margin-top: 25%;
     }
     .need_email {
         margin-top: 18px;
+    }
+    .d2_arrow {
+        left: 65%;
     }
 }
 @media(max-width: 397px) {
@@ -865,7 +873,11 @@ margin-top: 25%;
         line-height: unset;
     }
 }
-
+@media(max-width: 366px) {
+    .rout_h_1{
+        font-size: 28px;
+    }
+}
 @media(max-width: 340px) {
     .inf_a_arrow{
         margin-bottom: 10px;
@@ -905,7 +917,7 @@ margin-top: 25%;
         padding-top: 40px;
     }
     .day_8{
-      min-height: 347px;  
+      min-height:414px;  
     }
     .rout_h_1{
         font-size: 27px;

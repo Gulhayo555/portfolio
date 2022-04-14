@@ -146,6 +146,16 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
   
+window.addEventListener('scroll',()=> {
+  let content = document.querySelector('.trips_info');
+  let contentPosition =content.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+if(contentPosition < screenPosition){
+   content.classList.add('active');
+}else{
+    content.classList.remove('active');
+}   
+})
 const title = document.querySelector('.intro_inf_a')
 
 let txt = title.innerHTML

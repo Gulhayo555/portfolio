@@ -91,12 +91,33 @@ a {
     color: #275553;
     font-family: sans-serif;
 }
+.nav_link::after {
+    content: '';
+    background: gold;
+    border-radius: 23px 10px 0px 0px;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.nav_link:hover::after {
+    transform: scale(1);
+}
+
+.nav_link:hover {
+    color: gold;
+}
+
 
 .nav_link.btn {
     border: 1px solid #275553;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 10px 32px;
+}
+.nav_link.btn:hover{
+    border: 1px solid gold;
 }
 
 .intro {
@@ -401,6 +422,16 @@ right: -7%;
 
 .trips_info {
     margin-left: 96px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 1s  ease-in-out;
+}
+.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.basis{
+    flex-basis: 40%;
 }
 
 .aircraft {
@@ -413,7 +444,10 @@ right: -7%;
 .kamch_about{
     position: absolute;
     bottom: 8%;
-    left: 5%;
+    left: 5%; 
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 1s  ease-in-out;
 }
 .comment_h {
     max-width: 662px;
@@ -662,7 +696,11 @@ color: #BDBDBD;
     border-radius: 5px;
     max-width: 305px;
 }
-
+.expected_box:hover{
+    box-shadow: 0 0px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22),
+    0 0px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .6s;
+}
 .expected_h_2 {
     padding-top: 50px;
     min-height: 28px;
@@ -740,8 +778,8 @@ color: #BDBDBD;
 }
 .d_3arrow{
     position: absolute;
-    top: 30%;
-    left: 9%;
+    top: 31%;
+    left: 4%;
 }
 .day_3_images_1 {
     background: url(../images/day_2_photo.png);
@@ -917,7 +955,7 @@ justify-content: end;
 }
 
 .day_h_p_6 {
-   padding: 10px 10px 45px 30px;
+   padding: 10px 10px 45px 10px;
 }
 .day_6_slaydes{
     max-width: 851px;
@@ -1226,6 +1264,7 @@ justify-content: end;
 }
 .dots_p{
     margin-top: 40px;
+    padding-left: 5px;
 }
 .enter_info_p {
     max-width: 296px;
@@ -1617,6 +1656,9 @@ color: #F47648;
   margin-top: 16px;
     
 }
+.in_link:hover{
+    color: #fff;
+}
 
 .sign_p {
     font-family: var(--inBold);
@@ -1636,7 +1678,10 @@ color: #F47648;
     box-sizing: border-box;
     border-radius: 5px;
 }
-
+.sign_a:hover{
+   color: #999999; 
+   border: 1px solid #999999;
+}
 .signing_photo {
     display: flex;
     flex-wrap: wrap;
@@ -1733,7 +1778,9 @@ color: #F47648;
     line-height: 32px;
     color: #FFFFFF;
 }
-
+.num_p:hover{
+  color:  #ACACAC;
+}
 .time_p {
     font-family: var(--monsReg);
     font-size: 14px;
